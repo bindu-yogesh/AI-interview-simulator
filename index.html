@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Interview Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🎯 AI Interview Simulator</h1>
+
+        <div class="selection-panel">
+
+            <h2>Select Interview Type</h2>
+
+            <select id="category">
+                <option value="hr">HR Interview</option>
+                <option value="technical">Technical Interview</option>
+                <option value="aptitude">Aptitude Round</option>
+            </select>
+
+            <button id="startBtn">
+                Start Interview
+            </button>
+
+        </div>
+
+        <div id="interviewSection" class="hidden">
+
+            <div class="top-bar">
+                <div id="questionNumber">
+                    Question 1
+                </div>
+
+                <div id="timer">
+                    60
+                </div>
+            </div>
+
+            <div class="question-box">
+
+                <h2 id="questionText">
+                    Question appears here...
+                </h2>
+
+            </div>
+
+            <textarea
+                id="answerInput"
+                placeholder="Type your answer here..."
+            ></textarea>
+
+            <div class="buttons">
+
+                <button id="submitBtn">
+                    Submit Answer
+                </button>
+
+                <button id="nextBtn">
+                    Next Question
+                </button>
+
+            </div>
+
+            <div id="feedback"></div>
+
+        </div>
+
+        <div id="resultSection" class="hidden">
+
+            <h2>Interview Completed 🎉</h2>
+
+            <div id="finalScore"></div>
+
+            <button onclick="location.reload()">
+                Restart Interview
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

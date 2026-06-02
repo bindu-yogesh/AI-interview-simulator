@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #38bdf8;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.selection-panel {
+    text-align: center;
+}
+
+select {
+    width: 250px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+button {
+    background: #38bdf8;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
+}
+
+.hidden {
+    display: none;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#timer {
+    color: #f87171;
+}
+
+.question-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+#questionText {
+    line-height: 1.6;
+}
+
+textarea {
+    width: 100%;
+    min-height: 180px;
+    border-radius: 12px;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+#feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    min-height: 60px;
+}
+
+#resultSection {
+    text-align: center;
+}
+
+#finalScore {
+    font-size: 28px;
+    margin: 20px 0;
+    color: #4ade80;
+}
+
+@media(max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    textarea {
+        min-height: 150px;
+    }
+}
