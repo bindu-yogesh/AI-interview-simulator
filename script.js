@@ -1,6 +1,7 @@
 const startBtn = document.getElementById("startBtn");
 const submitBtn = document.getElementById("submitBtn");
 const nextBtn = document.getElementById("nextBtn");
+const skipBtn = document.getElementById("skipBtn");
 
 const categorySelect = document.getElementById("category");
 
@@ -39,6 +40,7 @@ let timeLeft = 60;
 
 startBtn.addEventListener("click", startInterview);
 submitBtn.addEventListener("click", submitAnswer);
+skipBtn.addEventListener("click", skipQuestion);
 nextBtn.addEventListener("click", nextQuestion);
 
 function startInterview() {
@@ -179,13 +181,35 @@ function evaluateAnswer(answer) {
     };
 }
 
-function nextQuestion() {
+function skipQuestion() {
 
     clearInterval(timer);
 
     currentIndex++;
 
     loadQuestion();
+}
+
+function nextQuestion() {
+
+    // clearInterval(timer);
+
+    // currentIndex++;
+
+    // loadQuestion();
+    const answer =
+        answerInput.value.trim();
+
+    if (answer.length === 0) {
+        alert("You haven't answered this question yet. If you wanna skip this question then press the skip button.")
+        // feedback.innerHTML = "You haven't answered this question yet. If you wanna skip this question then press the skip button.";
+    }
+
+    else {
+        clearInterval(timer);
+        currentIndex++;
+        loadQuestion();
+    }
 }
 
 function showResult() {
