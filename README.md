@@ -4,6 +4,7 @@ An interactive, responsive web application that helps students and job seekers p
 
 ## ✨ Features
 
+
 - 🎤 **Multiple Interview Categories** — HR, Technical, and Aptitude rounds.
 - 🔀 **Randomized Questions** — Five randomly selected questions per session.
 - ⏱️ **Countdown Timer** — 60 seconds to answer each question.
@@ -68,3 +69,4 @@ A web development project focused on making interview preparation more interacti
 ---
 
 ⭐ If you find this project useful, consider giving the repository a star!
+Thanks for watching. Hit the follow button
